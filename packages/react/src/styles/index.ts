@@ -2,6 +2,7 @@ import {
   colors,
   fontWeights,
   fontSizes,
+  fonts,
   lineHeights,
   radii,
   space
@@ -25,6 +26,7 @@ export const {
   },
   theme: {
     colors,
+    fonts,
     fontSizes,
     fontWeights,
     lineHeights,
