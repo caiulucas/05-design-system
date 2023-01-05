@@ -1,21 +1,27 @@
-import { Text, TextProps } from '@ignite-ui/react';
+import { Heading, HeadingProps } from '@ignite-ui/react';
 import { StoryObj, Meta } from '@storybook/react';
 
-const text =
-  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, natus! Natus, adipisci autem, deleniti ea optio iure libero dignissimos veniam corporis fuga repudiandae et, expedita quasi eos accusamus accusantium beatae.';
-
 export default {
-  title: 'Typography/Text',
-  component: Text,
+  title: 'Typography/Heading',
+  component: Heading,
   args: {
-    children: text
+    children: 'Custom title'
   }
-} as Meta<TextProps>;
+} as Meta<HeadingProps>;
 
-export const Primary: StoryObj<TextProps> = {};
+export const Primary: StoryObj<HeadingProps> = {};
 
-export const CustomTag: StoryObj<TextProps> = {
+export const CustomTag: StoryObj<HeadingProps> = {
   args: {
-    as: 'strong'
+    children: 'H1 Heading',
+    as: 'h1'
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'The heading always will be h2 by default, but it is possible to change using the property "as".  '
+      }
+    }
   }
 };
