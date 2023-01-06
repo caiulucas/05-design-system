@@ -835,6 +835,9 @@ interface CheckboxProps extends ComponentProps<typeof CheckboxContainer> {
 declare function Checkbox({ ...props }: {
     [x: string]: any;
 }): JSX.Element;
+declare namespace Checkbox {
+    var displayName: string;
+}
 
 declare const Heading: _stitches_react_types_styled_component.StyledComponent<"h2", {
     size?: "sm" | "md" | "lg" | "2xl" | "4xl" | "5xl" | "6xl" | "3xl" | undefined;

@@ -217,6 +217,7 @@ var Box = styled("div", {
   backgroundColor: "$gray800",
   border: "1px solid $gray600"
 });
+Box.displayName = "Box";
 
 // src/components/Button.tsx
 var Button = styled("button", {
@@ -286,6 +287,7 @@ var Button = styled("button", {
     size: "md"
   }
 });
+Button.displayName = "Button";
 
 // src/components/Checkbox/index.tsx
 var import_phosphor_react2 = require("phosphor-react");
@@ -346,6 +348,7 @@ function Checkbox2(_a) {
   var props = __objRest(_a, []);
   return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(CheckboxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(CheckboxIndicator, { asChild: true, children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(import_phosphor_react2.Check, { weight: "bold" }) }) }));
 }
+Checkbox2.displayName = "Avatar";
 
 // src/components/Heading.tsx
 var Heading = styled("h2", {
@@ -369,6 +372,7 @@ var Heading = styled("h2", {
     size: "md"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Text.tsx
 var Text = styled("p", {
@@ -397,6 +401,7 @@ var Text = styled("p", {
     size: "md"
   }
 });
+Text.displayName = "Text";
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -463,6 +468,7 @@ var TextArea = styled("textarea", {
     color: "$gray400"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/TextInput/styles.ts
 var TextInputContainer = styled("div", {

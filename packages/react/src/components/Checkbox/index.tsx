@@ -15,3 +15,5 @@ export function Checkbox({ ...props }) {
     </CheckboxContainer>
   );
 }
+
+Checkbox.displayName = 'Avatar';
