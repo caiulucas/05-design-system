@@ -63,7 +63,8 @@ __export(src_exports, {
   MultiStep: () => MultiStep,
   Text: () => Text,
   TextArea: () => TextArea,
-  TextInput: () => TextInput
+  TextInput: () => TextInput,
+  Toast: () => Toast
 });
 module.exports = __toCommonJS(src_exports);
 
@@ -75,8 +76,8 @@ var Avatar = __toESM(require("@radix-ui/react-avatar"));
 
 // ../tokens/dist/index.mjs
 var colors = {
-  white: "#fff",
-  black: "#000",
+  white: "#ffffff",
+  black: "#000000",
   gray100: "#e1e1e6",
   gray200: "#a9a9b2",
   gray400: "#7c7c8a",
@@ -518,6 +519,65 @@ function TextInput(_a) {
     /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Input, __spreadValues({}, props))
   ] });
 }
+
+// src/components/Toast/index.tsx
+var import_phosphor_react3 = require("phosphor-react");
+var import_react2 = require("react");
+
+// src/components/Toast/styles.ts
+var ToastContainer = styled("div", {
+  position: "absolute",
+  right: "$4",
+  bottom: "$4",
+  width: 360,
+  backgroundColor: "$gray800",
+  borderRadius: "$sm",
+  border: "1px solid $gray600",
+  padding: "$3 $5"
+});
+var Title = styled(Heading, {
+  lineHeight: "$base",
+  defaultVariants: {
+    size: "sm"
+  }
+});
+var Description = styled(Text, {
+  color: "$gray200",
+  lineHeight: "$base",
+  defaultVariants: {
+    size: "sm"
+  }
+});
+var CloseButton = styled(Button, {
+  position: "absolute",
+  right: "-$8",
+  bottom: "$8",
+  svg: {
+    width: "$5",
+    height: "$5"
+  },
+  defaultVariants: {
+    variant: "tertiary"
+  }
+});
+
+// src/components/Toast/index.tsx
+var import_jsx_runtime5 = require("react/jsx-runtime");
+function Toast(_a) {
+  var _b = _a, { title, description } = _b, props = __objRest(_b, ["title", "description"]);
+  const [isOpen, setIsOpen] = (0, import_react2.useState)(true);
+  return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)(
+    ToastContainer,
+    __spreadProps(__spreadValues({}, props), {
+      css: { display: `${isOpen ? "default" : "hidden"}}` },
+      children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Title, { children: title }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Description, { children: description }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(CloseButton, { onClick: () => setIsOpen(false), children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(import_phosphor_react3.X, {}) })
+      ]
+    })
+  );
+}
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   Avatar,
@@ -528,5 +588,6 @@ function TextInput(_a) {
   MultiStep,
   Text,
   TextArea,
-  TextInput
+  TextInput,
+  Toast
 });

@@ -38,8 +38,8 @@ import * as Avatar from "@radix-ui/react-avatar";
 
 // ../tokens/dist/index.mjs
 var colors = {
-  white: "#fff",
-  black: "#000",
+  white: "#ffffff",
+  black: "#000000",
   gray100: "#e1e1e6",
   gray200: "#a9a9b2",
   gray400: "#7c7c8a",
@@ -481,6 +481,65 @@ function TextInput(_a) {
     /* @__PURE__ */ jsx4(Input, __spreadValues({}, props))
   ] });
 }
+
+// src/components/Toast/index.tsx
+import { X } from "phosphor-react";
+import { useState } from "react";
+
+// src/components/Toast/styles.ts
+var ToastContainer = styled("div", {
+  position: "absolute",
+  right: "$4",
+  bottom: "$4",
+  width: 360,
+  backgroundColor: "$gray800",
+  borderRadius: "$sm",
+  border: "1px solid $gray600",
+  padding: "$3 $5"
+});
+var Title = styled(Heading, {
+  lineHeight: "$base",
+  defaultVariants: {
+    size: "sm"
+  }
+});
+var Description = styled(Text, {
+  color: "$gray200",
+  lineHeight: "$base",
+  defaultVariants: {
+    size: "sm"
+  }
+});
+var CloseButton = styled(Button, {
+  position: "absolute",
+  right: "-$8",
+  bottom: "$8",
+  svg: {
+    width: "$5",
+    height: "$5"
+  },
+  defaultVariants: {
+    variant: "tertiary"
+  }
+});
+
+// src/components/Toast/index.tsx
+import { jsx as jsx5, jsxs as jsxs4 } from "react/jsx-runtime";
+function Toast(_a) {
+  var _b = _a, { title, description } = _b, props = __objRest(_b, ["title", "description"]);
+  const [isOpen, setIsOpen] = useState(true);
+  return /* @__PURE__ */ jsxs4(
+    ToastContainer,
+    __spreadProps(__spreadValues({}, props), {
+      css: { display: `${isOpen ? "default" : "hidden"}}` },
+      children: [
+        /* @__PURE__ */ jsx5(Title, { children: title }),
+        /* @__PURE__ */ jsx5(Description, { children: description }),
+        /* @__PURE__ */ jsx5(CloseButton, { onClick: () => setIsOpen(false), children: /* @__PURE__ */ jsx5(X, {}) })
+      ]
+    })
+  );
+}
 export {
   Avatar2 as Avatar,
   Box,
@@ -490,5 +549,6 @@ export {
   MultiStep,
   Text,
   TextArea,
-  TextInput
+  TextInput,
+  Toast
 };
