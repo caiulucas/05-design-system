@@ -7,6 +7,13 @@ export default {
   args: {
     src: 'https://github.com/caiulucas.png',
     alt: 'Avatar photo'
+  },
+  argTypes: {
+    src: {
+      control: {
+        type: 'text'
+      }
+    }
   }
 } as Meta<AvatarProps>;
 
