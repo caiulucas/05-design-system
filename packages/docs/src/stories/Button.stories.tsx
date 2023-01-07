@@ -1,6 +1,6 @@
 import { ArrowRight } from 'phosphor-react';
 
-import { Button, ButtonProps } from '@ignite-ui/react';
+import { Button, ButtonProps } from '@caiulucas-ignite-ui/react';
 import { StoryObj, Meta } from '@storybook/react';
 
 export default {

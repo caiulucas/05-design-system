@@ -1,6 +1,6 @@
 {
-  "name": "@ignite-ui/eslint-config",
-  "version": "1.0.0",
+  "name": "@caiulucas-ignite-ui/eslint-config",
+  "version": "1.0.1",
   "private": true,
   "main": "index.js",
   "license": "ISC",

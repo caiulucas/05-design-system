@@ -1,4 +1,4 @@
-import { Text, TextProps } from '@ignite-ui/react';
+import { Text, TextProps } from '@caiulucas-ignite-ui/react';
 import { StoryObj, Meta } from '@storybook/react';
 
 const text =
