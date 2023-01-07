@@ -1,0 +1,2 @@
+import{A as t}from"./index.63373599.js";import"./index.45aed8ac.js";import"./iframe.cd23e8c9.js";import"./index.685e3fd0.js";import"./jsx-runtime.bebf6f9f.js";const c={title:"Data display/Avatar",component:t,args:{src:"https://github.com/caiulucas.png",alt:"Avatar photo"},argTypes:{src:{control:{type:"text"}}}},p={},m={args:{src:void 0}},e=["Primary","WithFallback"];export{p as Primary,m as WithFallback,e as __namedExportsOrder,c as default};
+//# sourceMappingURL=Avatar.stories.328d175a.js.map
